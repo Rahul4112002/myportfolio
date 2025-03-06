@@ -664,3 +664,119 @@ footer span a:hover{
         line-height: 38px;
     }
 }
+
+/* Project carousel styling */
+#projects-container {
+    -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    display: flex;
+    gap: 24px;
+    position: relative;
+  }
+  
+  #projects-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in Chrome/Safari/Edge */
+  }
+  
+  .project-card {
+    transition: transform 0.3s ease;
+    /* Set fixed width to ensure proper card sizing */
+    flex: 0 0 calc(25% - 18px); /* 25% for 4 cards with gap adjustment */
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Pagination dot styling */
+  .pagination-dot {
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .pagination-dot.active {
+    background-color: #66FCF1;
+  }
+  
+  /* Animation for navigation buttons */
+  #prev-btn, #next-btn {
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background-color: #111;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0.75;
+  }
+  
+  #prev-btn {
+    left: -20px;
+  }
+  
+  #next-btn {
+    right: -20px;
+  }
+  
+  #prev-btn:hover, #next-btn:hover {
+    background-color: #66FCF1;
+    color: black;
+    opacity: 1;
+  }
+  
+  
+/* Menu button styling - fix for mobile */
+/* Menu button styling - fix for mobile */
+.menu-btn {
+    display: none;
+    cursor: pointer;
+    color: white;
+    font-size: 23px;
+  }
+  
+  /* Responsive adjustments */
+  
+  @media (max-width: 768px) {
+
+    .project-card {
+        flex: 0 0 calc(50% - 12px); /* 50% for 2 cards with gap adjustment */
+      }
+      
+      #projects-container {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding: 0 0 20px 0; /* Add some bottom padding for mobile */
+      }
+      
+      .project-card {
+        scroll-snap-align: start;
+      }
+      
+      #prev-btn, #next-btn {
+        display: block; /* Always show on mobile for better UX */
+        width: 36px;
+        height: 36px;
+      }
+      
+      #prev-btn {
+        left: 5px;
+      }
+      
+      #next-btn {
+        right: 5px;
+      }
+    }
+    @media (max-width: 480px) {
+        /* Further adjustments for very small screens */
+        .project-card {
+          flex: 0 0 calc(100% - 40px); /* Single card visible on very small screens */
+        }
+      }
+
