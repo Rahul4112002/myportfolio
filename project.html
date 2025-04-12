@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahul Chauhan</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#66FCF1',
+                        dark: '#0b0c16',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-black text-white">
+    <div class="scroll-up-btn fixed right-8 bottom-8 bg-primary text-black text-4xl w-10 h-10 rounded-md flex items-center justify-center cursor-pointer z-50 opacity-0 transition-all">
+        <i class="fa fa-angle-up"></i>
+    </div>
+    
+    <nav class="navbar fixed w-full py-4 bg-black shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <div class="logo">
+                <a href="#" class="text-4xl font-bold">
+                    <span class="text-white">Portf</span><span class="text-primary">lio.</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project section -->
+    <section id="project" class="pt-16 pb-16 bg-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Title -->
+            <div class="mb-10 md:mb-16">
+                <h2 class="mt-10 mb-4 text-center text-3xl text-white md:mb-6 lg:text-4xl font-semibold">Projects</h2>
+            </div>
+            
+            <!-- Filter dropdown -->
+            <div class="mb-8 flex justify-center">
+                <div class="relative inline-block">
+                    <button id="category-dropdown" class="bg-gray-800 text-white px-4 py-2 rounded-md flex items-center space-x-2 hover:bg-gray-700 transition-colors">
+                        <span id="selected-category">All Projects</span>
+                        <i class="fa fa-chevron-down text-xs"></i>
+                    </button>
+                    <div id="dropdown-menu" class="hidden absolute mt-2 w-56 bg-gray-800 rounded-md shadow-lg z-10">
+                        <ul class="py-1 text-white">
+                            <li class="category-item px-4 py-2 hover:bg-gray-700 cursor-pointer transition-colors" data-category="all">All Projects</li>
+                            <li class="category-item px-4 py-2 hover:bg-gray-700 cursor-pointer transition-colors" data-category="machine-learning">Machine Learning</li>
+                            <li class="category-item px-4 py-2 hover:bg-gray-700 cursor-pointer transition-colors" data-category="deep-learning">Deep Learning</li>
+                            <li class="category-item px-4 py-2 hover:bg-gray-700 cursor-pointer transition-colors" data-category="full-stack">Full Stack</li>
+                            <li class="category-item px-4 py-2 hover:bg-gray-700 cursor-pointer transition-colors" data-category="nlp">NLP Projects</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Projects grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card flex flex-col overflow-hidden rounded-lg border bg-white h-full transition-all duration-300 hover:-translate-y-2" data-category="full-stack">
+                    <a href="https://recipepro-ai.onrender.com" class="group relative block h-48 overflow-hidden bg-gray-100 md:h-64">
+                        <img src="./images/recipepro.jpg" loading="lazy" alt="RecipePro.ai" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+                    </a>
+            
+                    <div class="flex flex-1 flex-col p-4 sm:p-6">
+                        <h2 class="mb-2 text-lg font-semibold text-gray-800">
+                            <a href="https://recipepro-ai.onrender.com" class="transition duration-100 hover:text-indigo-500 active:text-indigo-600">RecipePro.ai</a>
+                        </h2>
+                        <p class="text-sm text-gray-600 mb-4">A full-stack recipe recommendation application</p>
+            
+                        <div class="mt-auto flex items-end justify-between">
+                            <div class="flex items-center gap-2">
+                                <div class="h-10 w-10 shrink-0 overflow-hidden rounded-full bg-gray-100">
+                                    <img src="./images/github.jpg" loading="lazy" alt="GitHub" class="h-full w-full object-cover object-center" />
+                                </div>
+            
+                                <div>
+                                    <a href="https://github.com/Rahul4112002/RecipePro.ai"><span class="block text-indigo-500">Source code</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card flex flex-col overflow-hidden rounded-lg border bg-white h-full transition-all duration-300 hover:-translate-y-2" data-category="full-stack">
+                    <a href="https://officetrack.onrender.com" class="group relative block h-48 overflow-hidden bg-gray-100 md:h-64">
+                        <img src="./images/office.png" loading="lazy" alt="OfficeTrack" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+                    </a>
+            
+                    <div class="flex flex-1 flex-col p-4 sm:p-6">
+                        <h2 class="mb-2 text-lg font-semibold text-gray-800">
+                            <a href="https://officetrack.onrender.com" class="transition duration-100 hover:text-indigo-500 active:text-indigo-600">OfficeTrack</a>
+                        </h2>
+                        <p class="text-sm text-gray-600 mb-4">Office management and productivity application</p>
+            
+                        <div class="mt-auto flex items-end justify-between">
+                            <div class="flex items-center gap-2">
+                                <div class="h-10 w-10 shrink-0 overflow-hidden rounded-full bg-gray-100">
+                                    <img src="./images/github.jpg" loading="lazy" alt="GitHub" class="h-full w-full object-cover object-center" />
+                                </div>
+            
+                                <div>
+                                    <a href="https://github.com/Rahul4112002/OfficeTrack"><span class="block text-indigo-500">Source code</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Project 3 -->
+                <div class="project-card flex flex-col overflow-hidden rounded-lg border bg-white h-full transition-all duration-300 hover:-translate-y-2" data-category="machine-learning">
+                    <a href="https://github.com/Rahul4112002/Diamond-Price-Prediction" class="group relative block h-48 overflow-hidden bg-gray-100 md:h-64">
+                        <img src="./images/value.jpg" loading="lazy" alt="Diamond Price Prediction" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+                    </a>
+            
+                    <div class="flex flex-1 flex-col p-4 sm:p-6">
+                        <h2 class="mb-2 text-lg font-semibold text-gray-800">
+                            <a href="https://github.com/Rahul4112002/Diamond-Price-Prediction" class="transition duration-100 hover:text-indigo-500 active:text-indigo-600">Diamond Price Prediction</a>
+                        </h2>
+                        <p class="text-sm text-gray-600 mb-4">ML model to predict diamond prices based on attributes</p>
+            
+                        <div class="mt-auto flex items-end justify-between">
+                            <div class="flex items-center gap-2">
+                                <div class="h-10 w-10 shrink-0 overflow-hidden rounded-full bg-gray-100">
+                                    <img src="./images/github.jpg" loading="lazy" alt="GitHub" class="h-full w-full object-cover object-center" />
+                                </div>
+            
+                                <div>
+                                    <a href="https://github.com/Rahul4112002/Diamond-Price-Prediction"><span class="block text-indigo-500">Source code</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Project 4 -->
+                <div class="project-card flex flex-col overflow-hidden rounded-lg border bg-white h-full transition-all duration-300 hover:-translate-y-2" data-category="nlp">
+                    <a href="https://github.com/Rahul4112002/StockVision" class="group relative block h-48 overflow-hidden bg-gray-100 md:h-64">
+                        <img src="./images/stock-market.png" loading="lazy" alt="StockVision" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+                    </a>
+            
+                    <div class="flex flex-1 flex-col p-4 sm:p-6">
+                        <h2 class="mb-2 text-lg font-semibold text-gray-800">
+                            <a href="https://github.com/Rahul4112002/StockVision" class="transition duration-100 hover:text-indigo-500 active:text-indigo-600">StockVision</a>
+                        </h2>
+                        <p class="text-sm text-gray-600 mb-4">NLP-based sentiment analysis for stock market predictions</p>
+            
+                        <div class="mt-auto flex items-end justify-between">
+                            <div class="flex items-center gap-2">
+                                <div class="h-10 w-10 shrink-0 overflow-hidden rounded-full bg-gray-100">
+                                    <img src="./images/github.jpg" loading="lazy" alt="GitHub" class="h-full w-full object-cover object-center" />
+                                </div>
+            
+                                <div>
+                                    <a href="https://github.com/Rahul4112002/Sentiment-Analysis"><span class="block text-indigo-500">Source code</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card flex flex-col overflow-hidden rounded-lg border bg-white h-full transition-all duration-300 hover:-translate-y-2" data-category="deep-learning">
+                    <a href="#" class="group relative block h-48 overflow-hidden bg-gray-100 md:h-64">
+                        <img src="/api/placeholder/400/320" loading="lazy" alt="Image Recognition" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+                    </a>
+            
+                    <div class="flex flex-1 flex-col p-4 sm:p-6">
+                        <h2 class="mb-2 text-lg font-semibold text-gray-800">
+                            <a href="#" class="transition duration-100 hover:text-indigo-500 active:text-indigo-600">Image Recognition</a>
+                        </h2>
+                        <p class="text-sm text-gray-600 mb-4">Deep learning model for image classification and object detection</p>
+            
+                        <div class="mt-auto flex items-end justify-between">
+                            <div class="flex items-center gap-2">
+                                <div class="h-10 w-10 shrink-0 overflow-hidden rounded-full bg-gray-100">
+                                    <img src="./images/github.jpg" loading="lazy" alt="GitHub" class="h-full w-full object-cover object-center" />
+                                </div>
+            
+                                <div>
+                                    <a href="#"><span class="block text-indigo-500">Source code</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card flex flex-col overflow-hidden rounded-lg border bg-white h-full transition-all duration-300 hover:-translate-y-2" data-category="nlp">
+                    <a href="#" class="group relative block h-48 overflow-hidden bg-gray-100 md:h-64">
+                        <img src="/api/placeholder/400/320" loading="lazy" alt="Chat Assistant" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+                    </a>
+            
+                    <div class="flex flex-1 flex-col p-4 sm:p-6">
+                        <h2 class="mb-2 text-lg font-semibold text-gray-800">
+                            <a href="#" class="transition duration-100 hover:text-indigo-500 active:text-indigo-600">Chat Assistant</a>
+                        </h2>
+                        <p class="text-sm text-gray-600 mb-4">NLP-powered conversational AI chat assistant</p>
+            
+                        <div class="mt-auto flex items-end justify-between">
+                            <div class="flex items-center gap-2">
+                                <div class="h-10 w-10 shrink-0 overflow-hidden rounded-full bg-gray-100">
+                                    <img src="./images/github.jpg" loading="lazy" alt="GitHub" class="h-full w-full object-cover object-center" />
+                                </div>
+            
+                                <div>
+                                    <a href="#"><span class="block text-indigo-500">Source code</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer section start -->
+    <footer class="bg-gray-800 text-white text-center py-4">
+        <span>Created By <a href="#" class="text-primary hover:underline">Rahul</a> | <span class="fa fa-copyright"></span>
+            2023 All rights reserved.</span>
+    </footer>
+
+    <script src="filter.js"></script>
+</body>
+</html>

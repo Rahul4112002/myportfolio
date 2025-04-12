@@ -1,0 +1,54 @@
+/* Additional custom CSS to supplement Tailwind CSS */
+
+/* Smooth transitions for project cards */
+.project-card {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Custom animation for dropdown */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#dropdown-menu:not(.hidden) {
+    animation: fadeIn 0.2s ease-out forwards;
+}
+
+/* Project grid transitions */
+#projects-grid {
+    transition: opacity 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #66FCF1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #45d9d0;
+}
+
+/* Gradient text effect */
+.gradient-text {
+    background: linear-gradient(90deg, #66FCF1, #45d9d0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .project-card {
+        transform: none !important;
+    }
+}
